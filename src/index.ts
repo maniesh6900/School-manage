@@ -14,5 +14,3 @@ app.listen(port, ()=> {
     console.log(`server is up on : ${port}`);
     
 });
-
-export {app};
