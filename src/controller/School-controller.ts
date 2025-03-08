@@ -9,7 +9,7 @@ import { Request, Response } from "express";
 export const createSchool = asyncHandler(async (req: Request, res : Response) => {
     const parsedData = CreateSchoolSchema.safeParse(req.body);
     if(!parsedData.success) {
-        throw new ApiError(409, "Invalid Data");
+        throw new ApiError(405, "Invalid Data");
     }
 
     const exist = await client.schools.findFirst({
@@ -26,7 +26,7 @@ export const createSchool = asyncHandler(async (req: Request, res : Response) =>
     });
 
     if((exist || adress) || (exist && adress)) {
-        throw new ApiError(409, "Already exists in the dataBase");
+        throw new ApiError(406, "Already exists in the dataBase");
     }
 
      const school = await client.schools.create({

@@ -8,8 +8,6 @@ dotenv.config({
     path :"./.env",
 });
 
-
-
 // server listening 
 app.listen(port, ()=> {
     console.log(`server is up on : ${port}`);
