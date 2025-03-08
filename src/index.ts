@@ -8,6 +8,9 @@ dotenv.config({
     path :"./.env",
 });
 
+app.get("/", (req, res)=>{
+    res.json({msg : "hello world"});
+});
 
 // server listening 
 app.listen(port, ()=> {
