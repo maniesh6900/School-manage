@@ -1,0 +1,1 @@
+{"root":["./src/app.ts","./src/index.ts","./src/controller/school-controller.ts","./src/prisma/index.ts","./src/routes/schools-routes.ts","./src/type/index.ts","./src/utils/apierorr.ts","./src/utils/apiresponse.ts","./src/utils/asynchandler.ts"],"version":"5.8.2"}
